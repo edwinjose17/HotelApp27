@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLoginLayout</title>
+</head>
+<body>
+    < <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="company-logo.png" alt="Company Logo">
+            </div>
+            <div class="company-name">
+                Company Name
+            </div>
+        </nav>
+    </header>
+
+      <div class="content">
+          <div class="sidebar">
+              <ul>
+                  <li>@Html.ActionLink("Dashboard", "Index", "Dashboard")</li>
+                  <li>@Html.ActionLink("Users", "Index", "Users")</li>
+              </ul>
+          </div>
+
+          <div class="main-content">
+              @RenderBody() <!-- Placeholder for view content -->
+          </div>
+      </div>
+
+    <footer>
+        <div class="footer-content">
+            &copy; @DateTime.Now.Year Company Name. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

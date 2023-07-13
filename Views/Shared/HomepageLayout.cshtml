@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomepageLayout</title>
+</head>
+<body>   
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="company-logo.png" alt="Company Logo">
+                </div>
+                <div class="company-name">
+                    Hotel Booking App
+                </div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/Login/User">User Login</a>
+                    <a href="/Login/Admin">Admin Login</a>
+                    <a href="/Signup">Signup</a>
+                    <a href="/ContactUs">Contact Us</a>
+                    <a href="/AboutUs">About Us</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            @RenderBody() <!-- Placeholder for view content -->
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                &copy; 2023 Hotel Booking App. All rights reserved.
+            </div>
+        </footer>
+</body>
+</html>

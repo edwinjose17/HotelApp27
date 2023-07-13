@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomepageLayout</title>
+    <link href="~/Content/CSS/Homepage.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="company-logo.png" alt="Company Logo">
+            </div>
+            <div class="company-name">
+                Hotel Booking App
+            </div>
+            <div class="nav-links">
+                @Html.ActionLink("Home", "Homepage", "Homepage", new { area = "" }, new { @class = "nav-link" })
+                @Html.ActionLink("User Login", "User", "Login", new { area = "" }, new { @class = "nav-link" })
+                @Html.ActionLink("Admin Login", "Admin", "Login", new { area = "" }, new { @class = "nav-link" })
+                @Html.ActionLink("Signup", "Index", "Signup", new { area = "" }, new { @class = "nav-link" })
+                @Html.ActionLink("Contact Us", "Index", "ContactUs", new { area = "" }, new { @class = "nav-link" })
+                @Html.ActionLink("About Us", "Index", "AboutUs", new { area = "" }, new { @class = "nav-link" })
+            </div>
+        </div>
+    </header>
+        </nav>
+    <div class="content">
+        @RenderBody() <!-- Placeholder for view content -->
+        <!-- Image Cycle -->
+        <div class="image-cycle">
+            <img src="~/Content/Images/homepageimg1.jpg"  />
+            <img src="~/Content/Images/homepageimg2.jpg" />
+            <img src="~/Content/Images/homepageimg3.jpg" />
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            &copy; @DateTime.Now.Year Hotel Booking App. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
